@@ -13,15 +13,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Opacity(
-          opacity: 0.5,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.emoji_food_beverage_outlined, size: 48),
-              const SizedBox(height: 16),
-              Text(AppLocalizations.of(context)!.noRecipesYet),
-            ],
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Opacity(
+            opacity: 0.5,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.emoji_food_beverage_outlined, size: 48),
+                const SizedBox(height: 16),
+                Text(AppLocalizations.of(context)!.noRecipesYet,
+                    textAlign: TextAlign.center),
+              ],
+            ),
           ),
         ),
       ),
