@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:hestia/ui/home/home_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,21 +13,16 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Opacity(
-            opacity: 0.5,
-            child: Column(
-              children: [
-                SizedBox(height: 64),
-                Icon(Icons.emoji_food_beverage_outlined, size: 48),
-                SizedBox(height: 16),
-                Text(S.of(context).noTasksYet),
-              ],
-            ),
-          ),
-        ),
-      ),
+      title: 'Hestia',
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'),
+      ],
+      home: HomePage(),
     );
   }
 }

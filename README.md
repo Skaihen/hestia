@@ -1,3 +1,3 @@
-# hestia
+# Hestia
 
-A new Flutter project.
+A multiplatform cookbook made in flutter.
