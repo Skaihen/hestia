@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Opacity(
           opacity: 0.5,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 64),
-              Icon(Icons.emoji_food_beverage_outlined, size: 48),
-              SizedBox(height: 16),
-              Text(S.of(context).noTasksYet),
+              const Icon(Icons.emoji_food_beverage_outlined, size: 48),
+              const SizedBox(height: 16),
+              Text(AppLocalizations.of(context)!.noRecipesYet),
             ],
           ),
         ),

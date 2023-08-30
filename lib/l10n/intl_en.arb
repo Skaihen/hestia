@@ -1,7 +1,0 @@
-{
-  "@@locale": "en",
-  "noTasksYet": "No tasks yet. Click + to add a new one.",
-  "@noTasksYet": {
-    "description": "Text shown when there are no tasks to display in HomeScreen"
-  }
-}
