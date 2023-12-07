@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "noRecipesYet": "No recipes added yet. Click + to add a new one.",
+  "noRecipesYet": "No recipes found. Click + to add a new one.",
   "@noRecipesYet": {
     "description": "Text shown when there are no recipes to display in HomePage"
   }
