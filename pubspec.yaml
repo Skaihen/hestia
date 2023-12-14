@@ -1,20 +1,21 @@
 name: hestia
-description: A multiplatform cookbook made in flutter.
-publish_to: 'none'
+description: "A multiplatform cookbook made in flutter."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
 # followed by an optional build number separated by a +.
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
-version: 0.1.0+1
+version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.0 <4.0.0'
+  sdk: '>=3.2.3 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
+  cupertino_icons: ^1.0.2
   flutter_localizations:
     sdk: flutter
   intl: any
@@ -22,7 +23,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.3
+  flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
