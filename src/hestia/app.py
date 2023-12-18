@@ -15,6 +15,5 @@ class Hestia(toga.App):
         self.main_window.content = main_box
         self.main_window.show()
 
-
 def main():
     return Hestia()
