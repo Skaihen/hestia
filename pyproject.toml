@@ -8,24 +8,6 @@ license = "GNU General Public License v3 or later (GPLv3+)"
 author = "David Hidalgo - Skaihen"
 author_email = "_"
 
-[tool.pyright]
-include = ["src"]
-exclude = ["**/node_modules",
-    "**/__pycache__",
-    "src/experimental",
-    "src/typestubs"
-]
-ignore = ["src/oldstuff"]
-defineConstant = { DEBUG = true }
-stubPath = "src/stubs"
-
-reportMissingImports = true
-reportMissingTypeStubs = false
-
-executionEnvironments = [
-  { root = "src" }
-]
-
 [tool.briefcase.app.hestia]
 formal_name = "Hestia"
 description = "Multiplatform recipe book"

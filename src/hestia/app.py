@@ -19,7 +19,7 @@ class Hestia(toga.App):
         name_box.add(self.name_input)
 
         button = toga.Button(
-            "Say Hello!", on_press=self.say_hello, style=Pack(padding=5)
+            "Say Hello!", on_press=self.say_hello(), style=Pack(padding=5)
         )
 
         main_box.add(name_box)
@@ -29,8 +29,8 @@ class Hestia(toga.App):
         self.main_window.content = main_box
         self.main_window.show()
 
-    def say_hello(self, widget: int):
-        print(f"Hello, {self.name_input.value}")
+    def say_hello(self):
+        self.main_window.info_dialog(f"Hello, {self.name_input.value}", "Hi there!")
 
 
 def main():
