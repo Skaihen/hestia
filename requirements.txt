@@ -1,1 +1,4 @@
-briefcase
+kivy
+kivymd
+Pillow
+materialyoucolor

@@ -6,6 +6,13 @@ from toga.style.pack import Pack
 from travertino.constants import COLUMN, ROW
 
 
+def greeting(name):
+    if name:
+        return f"Hello, {name}"
+    else:
+        return "Hello, stranger"
+
+
 class Hestia(toga.App):
     def startup(self):
         main_box = toga.Box(style=Pack(direction=COLUMN))
@@ -19,7 +26,7 @@ class Hestia(toga.App):
         name_box.add(self.name_input)
 
         button = toga.Button(
-            "Say Hello!", on_press=self.say_hello(), style=Pack(padding=5)
+            "Say Hello!", on_press=self.say_hello, style=Pack(padding=5)
         )
 
         main_box.add(name_box)
@@ -29,8 +36,8 @@ class Hestia(toga.App):
         self.main_window.content = main_box
         self.main_window.show()
 
-    def say_hello(self):
-        self.main_window.info_dialog(f"Hello, {self.name_input.value}", "Hi there!")
+    def say_hello(self, widget):
+        self.main_window.info_dialog(greeting(self.name_input.value), "Hi there!")
 
 
 def main():
