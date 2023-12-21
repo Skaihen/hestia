@@ -1,18 +1,22 @@
-from kivymd.app import MDApp
-from kivymd.uix.screen import MDScreen
-from kivymd.uix.button import MDRectangleFlatButton
+import random
+from PySide6 import QtCore, QtWidgets
 
 
-class MainApp(MDApp):
-    def build(self):
-        self.theme_cls.theme_style = "Dark"
-        self.theme_cls.primary_palette = "Orange"
+class MyWidget(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
 
-        return MDScreen(
-            MDRectangleFlatButton(
-                text="Hello, World", pos_hint={"center_x": 0.5, "center_y": 0.5}
-            )
-        )
+        self.hello = ["Hallo Welt", "Hei maailma", "Hola Mundo", "Привет мир"]
 
+        self.button = QtWidgets.QPushButton("Click me!")
+        self.text = QtWidgets.QLabel("Hello World", alignment=QtCore.Qt.AlignCenter)
 
-MainApp().run()
+        self.layout = QtWidgets.QVBoxLayout(self)
+        self.layout.addWidget(self.text)
+        self.layout.addWidget(self.button)
+
+        self.button.clicked.connect(self.magic)
+
+    @QtCore.Slot()
+    def magic(self):
+        self.text.setText(random.choice(self.hello))
